@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Maven">
+  <test  name="NOwhere">
+    <classes>
+      <class name="maventest.Jagseer2.Testapi"/>
+      <class name="maventest.Jagseer2.sleniumTest"/>
+    </classes>
+  </test> <!-- Test -->
+<test name="Second test">
+<classes>
+<class name="maventest.Jagseer2.AppiumTest"/>
+</classes>
+</test>
+</suite> <!-- Suite -->

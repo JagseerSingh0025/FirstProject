@@ -1,0 +1,100 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+public class Listeners extends Drivers implements ITestListener {
+	ExtentTest test1;
+	ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();// when we are running multiple tests parallel with
+																	// common variable, it may overwritten by them
+																	// before one test completed.so we may see
+																	// inconsistent results because of that, To avoid
+																	// that we use Thread safe concept
+	// ThreadLocal<Variable Type> Name = new ThreadLocal<Variable Type>();
+
+	ExtentReports E = Reports.Repo();// 1.calling method by className.Method.Name,
+	// 2. Put it in a variable as
+	// returntype of that method.
+	// 3. now you can use Object E as EXT of Reports class object
+
+	public void onTestStart(ITestResult result) {
+
+		String Name = result.getMethod().getMethodName();
+		test1 = E.createTest(Name + " Intialized");// 4. we created a test with--E.createTest("Test Intialized")--,
+													// it has a return type ExtentTest and we can store it in
+													// variable 5. We have to declare it globally so we can use it.
+		test.set(test1);// Now we can Set variable values in ThreadLocal set//storing values
+
+	}
+
+	public void onTestSuccess(ITestResult result) {
+
+		test.get().log(Status.PASS, "Test Got Passed");// Test Passed and print string
+		// To pull that value by owner we use Name.get().following
+		// operation.///retrieving values
+
+	}
+
+	public void onTestFailure(ITestResult result) {
+		WebDriver driver = null;// 4. we have to initialize this variable if we want to return or use through
+								// the parameters in another class or method
+		String Name = result.getMethod().getMethodName();// 1. result store all the information about failed test, we
+															// want
+															// to get the method name
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
+					.get(result.getInstance());// 3. if test is failed our listener class doesn't know about driver so
+												// we
+												// have to provide it through this
+		} catch (Exception e) {
+
+		}
+		try {
+			//Screenshot(Name, driver);// 2. we pass name and drive that will pass the information to
+													// screenshot method
+			                                        // about these two parameters from this block
+			test.get().addScreenCaptureFromPath(Screenshot(Name, driver), result.getMethod().getMethodName());// for location of screenshot we set screenshot method
+															// returns a path and store that in a variable Path and use
+															// that here.
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		test.get().fail("test got failed at" + Name + "method");// test prints the name of failed test
+		test.get().fail(result.getThrowable());// test print the logs of failed method
+
+	}
+
+	public void onTestSkipped(ITestResult result) {
+		String Name = result.getMethod().getMethodName();
+		test.get().skip("test is skipped" + Name + "method");
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onFinish(ITestContext context) {
+		test.get().info("Tests are completed");// Providing info that testcases are finished
+		E.flush();// it saying reporter to stop reporting after this.execution is completed
+		// TODO Auto-generated method stub
+
+	}
+
+}

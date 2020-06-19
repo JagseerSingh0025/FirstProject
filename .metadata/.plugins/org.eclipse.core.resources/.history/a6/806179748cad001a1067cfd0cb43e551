@@ -1,0 +1,34 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+import org.bson.assertions.Assertions;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class ValidationNav extends Drivers {
+	@BeforeTest
+	public void intiate() throws IOException {
+		driver = intialize();
+		String URL = url();
+		driver.get(URL);
+
+	}
+
+	@Test
+	public void First() throws IOException {
+
+		HomePage H = new HomePage(driver);
+		Boolean Condition = H.Contact.isDisplayed();
+		Assert.assertTrue(Condition, "is not here");
+
+	}
+
+	@AfterTest
+	public void terminate() {
+		driver.close();
+	}
+}

@@ -1,0 +1,15 @@
+package first;
+
+public class One {
+
+	public static void main(String[] args) {
+		Two aobject= new Two();
+		aobject.addition();
+		System.out.print("Hello ");
+		System.out.println("Jagseer");
+		three bobject= new three();
+		bobject.statements();
+	}
+
+}
+

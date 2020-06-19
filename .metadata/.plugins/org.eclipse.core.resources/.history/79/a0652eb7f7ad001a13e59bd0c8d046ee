@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RTest" parallel="tests">
+	<test name="LoginTest">
+		<classes>
+			<class name="Practical.RealProject.LandingPage" />
+		</classes>
+	</test>
+	<test name="TitleValidation">
+		<classes>
+			<class name="Practical.RealProject.ValidationTitles" />
+		</classes>
+	</test>
+	<test name="NavigationBar">
+		<classes>
+			<class name="Practical.RealProject.ValidationNav" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

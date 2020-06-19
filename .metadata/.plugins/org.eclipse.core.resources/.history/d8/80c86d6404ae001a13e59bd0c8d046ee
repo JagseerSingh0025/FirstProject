@@ -1,0 +1,63 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class Listeners extends Drivers implements ITestListener {
+
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onTestFailure(ITestResult result) {
+		WebDriver driver = null;//4. we have to initialize this variable if we want to return or use through the parameters in another class or method
+		String Name = result.getMethod().getMethodName();//1. result store all the information about failed test, we want
+															// to get the method name
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
+					.get(result.getInstance());//3. if test is failed our listener class doesn't know about driver so we
+												// have to provide it through this
+		} catch (Exception e) {
+
+		}
+		try {
+			Screenshot(Name, driver);//2. we pass name and drive that will pass the information to screenshot method
+										// about these two parameters from this block
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

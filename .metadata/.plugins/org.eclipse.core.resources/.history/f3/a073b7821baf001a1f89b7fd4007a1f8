@@ -1,0 +1,21 @@
+package introduction;
+
+public class JavaP {
+	public static void main(String args[]){
+		int i=1;
+		int j=1;
+	for (;i<=4;i++)
+	{
+		System.out.print(" hi ");
+
+		}
+	}
+	
+
+}
+/*
+1234
+567
+89
+10
+*/

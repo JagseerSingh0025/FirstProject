@@ -1,0 +1,25 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+import org.bson.assertions.Assertions;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class Validation extends Drivers {
+	@Test
+	public void First() throws IOException {
+		driver=intialize();
+		driver.get("http://qaclickacademy.com/");
+		HomePage H = new HomePage(driver);
+	   String text= H.Feature().getText();
+	   if(text.equalsIgnoreCase("Featured Courses"))
+	   {
+		  Assert.assertTrue(true, "text is present");
+	   }
+	   else {
+		   Assert.fail("text is not present");
+	   }
+
+}}

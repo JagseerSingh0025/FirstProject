@@ -1,0 +1,26 @@
+package introduction;
+
+public class JavaP {
+	public static void main(String args[]){
+		int i=1;
+	for (;i<=10;i++)
+	{
+		for(;i<6;i++)
+		{
+			System.out.print(" "+i+" ");
+			for(;i<=3;i++) {
+				System.out.print(" "+i+" ");
+		}
+		System.out.println(" ");
+		}
+		System.out.print(" "+i+" ");
+		
+		}
+	}
+	
+
+}
+/*1
+23
+456
+78910*/

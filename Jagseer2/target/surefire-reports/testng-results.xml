@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Maven" duration-ms="109" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+    <groups>
+    </groups>
+    <test name="NOwhere" duration-ms="69" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+      <class name="maventest.Jagseer2.sleniumTest">
+        <test-method status="PASS" signature="method()[pri:0, instance:maventest.Jagseer2.sleniumTest@37574691]" name="method" duration-ms="0" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method -->
+        <test-method status="PASS" signature="method1()[pri:0, instance:maventest.Jagseer2.sleniumTest@37574691]" name="method1" duration-ms="0" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method1 -->
+        <test-method status="PASS" signature="method7()[pri:0, instance:maventest.Jagseer2.sleniumTest@37574691]" name="method7" duration-ms="0" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method7 -->
+      </class> <!-- maventest.Jagseer2.sleniumTest -->
+      <class name="maventest.Jagseer2.Testapi">
+        <test-method status="PASS" signature="method3()[pri:0, instance:maventest.Jagseer2.Testapi@6a79c292]" name="method3" duration-ms="12" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method3 -->
+        <test-method status="PASS" signature="method4()[pri:0, instance:maventest.Jagseer2.Testapi@6a79c292]" name="method4" duration-ms="0" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method4 -->
+      </class> <!-- maventest.Jagseer2.Testapi -->
+    </test> <!-- NOwhere -->
+    <test name="Second test" duration-ms="4" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+      <class name="maventest.Jagseer2.AppiumTest">
+        <test-method status="PASS" signature="method5()[pri:0, instance:maventest.Jagseer2.AppiumTest@221af3c0]" name="method5" duration-ms="0" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method5 -->
+        <test-method status="PASS" signature="method6()[pri:0, instance:maventest.Jagseer2.AppiumTest@221af3c0]" name="method6" duration-ms="0" started-at="2020-06-10T14:08:08Z" finished-at="2020-06-10T14:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method6 -->
+      </class> <!-- maventest.Jagseer2.AppiumTest -->
+    </test> <!-- Second test -->
+  </suite> <!-- Maven -->
+</testng-results>

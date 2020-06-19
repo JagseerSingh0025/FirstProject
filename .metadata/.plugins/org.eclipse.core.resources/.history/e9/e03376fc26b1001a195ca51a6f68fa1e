@@ -1,0 +1,5 @@
+Feature: Application Login 
+secanrio: Login
+given UserName "USer1" and Password "Password1"
+
+#To satisfy this feature we may have to work on diffrent scenarios

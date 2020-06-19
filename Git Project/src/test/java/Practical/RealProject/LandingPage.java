@@ -1,0 +1,54 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class LandingPage extends Drivers {
+	WebDriver driver;
+	public static Logger log=LogManager.getLogger(LandingPage.class.getName());
+	@BeforeTest
+	public void intiate() throws IOException {
+		driver = intialize();
+		log.info("Driver initialized");
+	}
+
+	@Test(dataProvider = "getdata")
+	public void VerifyUser(String email, String pswrd, String user) throws IOException {
+		String URL = url();
+		driver.get(URL);
+		log.info("Reached at URL");
+		HomePage H = new HomePage(driver);
+		LoginPage l=H.Login();
+		l.emailid.sendKeys(email);
+		l.password.sendKeys(pswrd);
+		l.LoginButton.click();
+		log.info(user);
+		log.info("test succeed");
+
+	}
+
+	@DataProvider
+	public Object[][] getdata() {
+		Object[][] o = new Object[2][3];
+		o[0][0] = "abc@gm.com";
+		o[0][1] = "pwrd1";
+		o[0][2] = "Good User";
+		o[1][0] = "xyz@abc.com";
+		o[1][1] = "pswrd2";
+		o[1][2] = "Restricted User";
+		return o;
+	}
+
+	@AfterTest
+	public void terminate() {
+		driver.close();
+	}
+
+}

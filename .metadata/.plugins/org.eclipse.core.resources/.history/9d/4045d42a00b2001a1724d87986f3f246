@@ -1,0 +1,14 @@
+Feature: Application Login
+
+
+Scenario: Login
+Given username "UserName@gmail" and password "Password123"
+When I log into page
+Then Results should be "UserName@gmail" and "Password123"
+And Validate "Condition"
+
+Scenario: Login
+Given username "User2" and password "Pass2"
+When I log into page
+Then Results should be "User2" and "User2"
+And Validate "Condition"

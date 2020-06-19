@@ -1,0 +1,14 @@
+Feature: Application Login
+
+
+Scenario: Login
+Given username "User1" and password "Password1"
+When I log into page
+Then Results should be "U" and "P"
+And Validate "True"
+
+Scenario: Login
+Given username "User2" and password "Password2"
+When I log into page
+Then Results should be "U" and "p"
+And Validate "false"

@@ -1,0 +1,18 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+public class LandingPage extends Drivers {
+	public void First() throws IOException {
+		driver=intialize();
+		driver.get("http://qaclickacademy.com/");
+		HomePage H = new HomePage(driver);
+		H.login.click();
+		LoginPage l= new LoginPage(driver);
+		l.emailid.sendKeys("Jagseer");
+		l.password.sendKeys("123456");
+		l.LoginButton.click();
+	}
+	
+
+}

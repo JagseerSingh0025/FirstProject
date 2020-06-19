@@ -1,0 +1,40 @@
+package introduction;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assignment8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\\\driver\\\\chromedriver.exe");
+		WebDriver c= new ChromeDriver();
+		c.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		c.findElement(By.xpath("//input[@id='autocomplete']")).sendKeys("IND");
+		JavascriptExecutor j= (JavascriptExecutor)c;
+		String Sc="return document.getElementById(\"autocomplete\").value;";
+		String text=(String) j.executeScript(Sc);
+		while(!text.equalsIgnoreCase("India")) {
+			c.findElement(By.xpath("//input[@id='autocomplete']")).sendKeys(Keys.DOWN);
+			text=(String) j.executeScript(Sc);
+			System.out.print(text);
+			int i=0;
+			i++;
+			if(i>5) {
+				System.out.print("Element not found");
+				break;
+			}
+			else {
+				System.out.print("Element found on"+i+"th index");
+				
+			}
+			
+		}
+		System.out.print(text);
+	}
+
+}

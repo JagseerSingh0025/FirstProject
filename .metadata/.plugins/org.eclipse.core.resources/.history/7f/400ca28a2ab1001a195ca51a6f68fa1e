@@ -1,0 +1,38 @@
+package definition;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+public class DefinitionFile {
+	@Given("username {string} and Password {string}")
+	public void username_and_Password(String string, String string2) {
+	    System.out.println(string);
+	    System.out.println(string2);
+	}
+
+
+	@When("I log into page")
+	public void i_log_into_page() {
+	   System.out.println("Logged");
+	}
+	@Then("Results should be {string} and {string}")
+	public void results_should_be_and(String string, String string2) {
+	    System.out.println("Results are "+string+" "+string2);
+	}
+	@Then("Validate {string}")
+	public void validate(String string) {
+		if(string.equalsIgnoreCase("True")) {
+		System.out.println("results are expected");}
+		else {System.out.println("Results are not matched");}
+	}
+	
+
+
+
+
+}

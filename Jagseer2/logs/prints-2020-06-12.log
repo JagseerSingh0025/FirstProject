@@ -1,0 +1,7 @@
+23:35:35.901 [main] ERROR maventest.Jagseer2.AppiumTest - this is not working
+23:35:35.932 [main] FATAL maventest.Jagseer2.AppiumTest - work it out
+23:35:52.934 [main] DEBUG maventest.Jagseer2.AppiumTest - Method invoked 5
+23:35:52.947 [main] ERROR maventest.Jagseer2.AppiumTest - this is not working
+23:35:52.951 [main] FATAL maventest.Jagseer2.AppiumTest - work it out
+23:36:37.143 [main] DEBUG maventest.Jagseer2.AppiumTest - Method invoked 5
+23:36:37.158 [main] ERROR maventest.Jagseer2.AppiumTest - this is not working

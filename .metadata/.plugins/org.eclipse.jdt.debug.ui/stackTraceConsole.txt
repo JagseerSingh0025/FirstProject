@@ -1,0 +1,28 @@
+io.cucumber.junit.UndefinedStepException: The step "username "User1" and Password "Password1"" is undefined. You can implement it using the snippet(s) below:
+
+@Given("username {string} and Password {string}")
+public void username_and_Password(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("I log into page")
+public void i_log_into_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Results should be {string} and {string}")
+public void results_should_be_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate {string}")
+public void validate(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

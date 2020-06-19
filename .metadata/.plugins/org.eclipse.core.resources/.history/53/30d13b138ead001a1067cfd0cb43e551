@@ -1,0 +1,7 @@
+21:20:58.373 [main] INFO  Practical.RealProject.LandingPage - Driver initialized
+21:21:20.223 [main] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+21:21:27.619 [main] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+21:21:32.765 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+21:21:45.470 [main] INFO  Practical.RealProject.LandingPage - Good User
+21:21:45.470 [main] INFO  Practical.RealProject.LandingPage - test succeed
+21:21:47.813 [main] INFO  Practical.RealProject.LandingPage - Reached at URL

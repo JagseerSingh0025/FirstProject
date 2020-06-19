@@ -1,0 +1,14 @@
+package cucumberoptions;
+
+import org.junit.runner.RunWith;
+import org.testng.annotations.Test;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@Test
+@CucumberOptions( features="src/test/java/Features", glue="DefinitionFile"
+		)
+public class TestRunner {
+
+}

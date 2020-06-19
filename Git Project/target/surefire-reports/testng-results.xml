@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Real Time Test" duration-ms="37350" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:15:31Z">
+    <groups>
+    </groups>
+    <test name="NavigationBar" duration-ms="15436" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:15:10Z">
+      <class name="Practical.RealProject.ValidationNav">
+        <test-method status="PASS" signature="intiate()[pri:0, instance:Practical.RealProject.ValidationNav@3b6d844d]" name="intiate" is-config="true" duration-ms="14836" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:15:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intiate -->
+        <test-method status="PASS" signature="ValidateNav()[pri:0, instance:Practical.RealProject.ValidationNav@3b6d844d]" name="ValidateNav" duration-ms="84" started-at="2020-06-15T06:15:09Z" finished-at="2020-06-15T06:15:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateNav -->
+        <test-method status="PASS" signature="terminate()[pri:0, instance:Practical.RealProject.ValidationNav@3b6d844d]" name="terminate" is-config="true" duration-ms="516" started-at="2020-06-15T06:15:09Z" finished-at="2020-06-15T06:15:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+      </class> <!-- Practical.RealProject.ValidationNav -->
+    </test> <!-- NavigationBar -->
+    <test name="TitleValidation" duration-ms="16176" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:15:10Z">
+      <class name="Practical.RealProject.ValidationTitles">
+        <test-method status="PASS" signature="intiate()[pri:0, instance:Practical.RealProject.ValidationTitles@15d49048]" name="intiate" is-config="true" duration-ms="13067" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intiate -->
+        <test-method status="PASS" signature="ValidateText()[pri:0, instance:Practical.RealProject.ValidationTitles@15d49048]" name="ValidateText" duration-ms="808" started-at="2020-06-15T06:15:07Z" finished-at="2020-06-15T06:15:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateText -->
+        <test-method status="PASS" signature="terminate()[pri:0, instance:Practical.RealProject.ValidationTitles@15d49048]" name="terminate" is-config="true" duration-ms="2289" started-at="2020-06-15T06:15:08Z" finished-at="2020-06-15T06:15:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+      </class> <!-- Practical.RealProject.ValidationTitles -->
+    </test> <!-- TitleValidation -->
+    <test name="LoginTest" duration-ms="37350" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:15:31Z">
+      <class name="Practical.RealProject.LandingPage">
+        <test-method status="PASS" signature="intiate()[pri:0, instance:Practical.RealProject.LandingPage@660acfb]" name="intiate" is-config="true" duration-ms="4906" started-at="2020-06-15T06:14:54Z" finished-at="2020-06-15T06:14:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intiate -->
+        <test-method status="PASS" signature="VerifyUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practical.RealProject.LandingPage@660acfb]" name="VerifyUser" duration-ms="21887" started-at="2020-06-15T06:14:59Z" data-provider="getdata" finished-at="2020-06-15T06:15:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@gm.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pwrd1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Good User]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUser -->
+        <test-method status="PASS" signature="VerifyUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practical.RealProject.LandingPage@660acfb]" name="VerifyUser" duration-ms="10347" started-at="2020-06-15T06:15:21Z" data-provider="getdata" finished-at="2020-06-15T06:15:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[xyz@abc.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pswrd2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Restricted User]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUser -->
+        <test-method status="PASS" signature="terminate()[pri:0, instance:Practical.RealProject.LandingPage@660acfb]" name="terminate" is-config="true" duration-ms="164" started-at="2020-06-15T06:15:31Z" finished-at="2020-06-15T06:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+      </class> <!-- Practical.RealProject.LandingPage -->
+    </test> <!-- LoginTest -->
+  </suite> <!-- Real Time Test -->
+</testng-results>

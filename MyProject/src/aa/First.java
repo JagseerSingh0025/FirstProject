@@ -1,0 +1,93 @@
+package aa;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import PageObject.HomePage;
+
+public class First {
+	WebDriver b;
+	@Test
+	public void NewMethod() {
+		System.setProperty("webdriver.chrome.driver","C:\\\\driver\\\\chromedriver.exe");
+		b = new ChromeDriver();
+		b.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		HomePage r=new HomePage(b);
+		r.Radio().click();
+		r.TextBox().sendKeys("hello:");
+		
+	}
+	@Test
+	public void Method1() throws IOException, InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\\\driver\\\\chromedriver.exe");
+		b = new ChromeDriver();
+		Properties p = new Properties();
+		FileInputStream FIS = new FileInputStream("C:\\Users\\Jagseer\\eclipse-workspace\\MyProject\\src\\Ref.properties");
+		p.load(FIS);
+		String URL = p.getProperty("URL");
+		//FileOutputStream FOS = new FileOutputStream("C:\\Users\\Jagseer\\eclipse-workspace\\MyProject\\src\\Ref.properties");
+		b.get(URL);
+		String text = b.findElement(By.id("openwindow")).getText();
+		WebElement path = b.findElement(By.id("dropdown-class-example"));
+		Select s = new Select(path);
+		s.selectByIndex(3);
+		System.out.println(b.findElement(By.id("dropdown-class-example")).getText());
+		Thread.sleep(4000);
+		b.close();
+	     }
+
+	@Test
+	public void Method2() throws IOException, InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\\\driver\\\\chromedriver.exe");
+		b = new ChromeDriver();
+		Properties p = new Properties();
+		FileInputStream FIS = new FileInputStream("C:\\Users\\Jagseer\\eclipse-workspace\\MyProject\\src\\Ref.properties");
+		p.load(FIS);
+		b.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		String URL = p.getProperty("URL");
+		b.get(URL);
+		b.findElement(By.xpath("//a[@id='opentab']")).click();
+		Set<String> id=b.getWindowHandles();
+		Iterator<String> it=id.iterator();
+		String parentId=it.next();
+		while(it.hasNext()) {
+			String f=it.next();
+			b.switchTo().window(f);
+			System.out.println(b.getTitle());
+		}
+		b.switchTo().window(parentId);
+		b.findElement(By.xpath("//a[@id='opentab']")).click();
+		while(it.hasNext()) {
+			String f=it.next();
+			b.switchTo().window(f);
+			System.out.println(b.getTitle());
+		
+		
+		
+	}
+		Set<String> ids=b.getWindowHandles();
+		int i=ids.size();
+		System.out.println("number of tabs are "+i);
+		
+		Thread.sleep(4000);
+		b.quit();;
+		}
+	
+
+}

@@ -1,0 +1,35 @@
+package Practical.RealProject;
+
+import java.io.IOException;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class LandingPage extends Drivers {
+	@Test(dataProvider="getdata")
+	public void First(String email,String pswrd, String user) throws IOException {
+		driver=intialize();
+		driver.get("http://qaclickacademy.com/");
+		HomePage H = new HomePage(driver);
+		H.login.click();
+		LoginPage l= new LoginPage(driver);
+		l.emailid.sendKeys(email);
+		l.password.sendKeys(pswrd);
+		l.LoginButton.click();
+		System.out.println(user);
+		driver.close();
+		
+	}
+	@DataProvider
+	public Object[][] getdata() {
+		Object[][] o=new Object[2][3];
+		o[0][0]="abc@gm.com";
+		o[0][1]="pwrd1";
+		o[0][2]="Good User";
+		o[1][0]="xyz@abc.com";
+		o[1][1]="pswrd2";
+		o[1][2]="Restricted User";
+		return o;
+	}
+
+}

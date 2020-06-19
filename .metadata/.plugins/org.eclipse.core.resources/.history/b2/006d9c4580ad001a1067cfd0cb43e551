@@ -1,0 +1,41 @@
+package Practical.RealProject;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Drivers {
+	WebDriver driver;
+	public WebDriver intialize() throws IOException {
+	
+		Properties prop= new Properties();
+		FileInputStream fis= new FileInputStream("C:\\Users\\Jagseer\\eclipse-workspace\\RealProject\\Data.Properties");
+		prop.load(fis);
+		String browser=prop.getProperty("browser");
+		//System.out.println(browser);
+		if(browser.equals("Chrome")) {
+			System.setProperty("webdriver.chrome.driver", "C:\\\\driver\\\\chromedriver.exe");
+		driver = new ChromeDriver();
+			
+		}
+		else if(browser.equals("Firefox")) {
+			System.out.println("has not set yet");
+			
+		}
+		else if(browser.equals("IE")) {
+			System.out.println("has not set yet");	
+		}
+		else {
+			System.setProperty("webdriver.chrome.driver", "C:\\\\driver\\\\chromedriver.exe");
+			WebDriver b = new ChromeDriver();
+		}
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		return driver;
+	}
+
+}

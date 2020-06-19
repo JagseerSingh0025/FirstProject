@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QAPage">
+  <test  name="QA">
+    <classes>
+      <class name="aa.First"/>
+    </classes>
+  </test> <!-- Test -->
+  <test  name="Google">
+  <classes>
+  <class name="aa.Second"/>
+  </classes>
+  </test>
+</suite> <!-- Suite -->

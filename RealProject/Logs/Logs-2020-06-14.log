@@ -1,0 +1,54 @@
+10:05:14.107 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Good User
+10:05:14.123 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - test succeed
+10:05:16.535 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Reached at URL
+10:05:31.580 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Restricted User
+10:05:31.580 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - test succeed
+11:31:33.231 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Driver initialized
+11:31:38.917 [TestNG-tests-3] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+11:31:38.965 [TestNG-tests-2] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+166:06:2020:11:35:13.864 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Driver initialized
+166:06:2020:11:35:18.179 [TestNG-tests-3] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+166:06:2020:11:35:18.758 [TestNG-tests-2] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+14-06-2020:11:38:43.613 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Driver initialized
+14-06-2020:11:38:48.950 [TestNG-tests-2] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+14-06-2020:11:38:49.350 [TestNG-tests-3] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+14-06-2020:11:40:14.000 [main] INFO  Practical.RealProject.LandingPage - Driver initialized
+14-06-2020:11:46:58.899 [main] INFO  Practical.RealProject.LandingPage - Driver initialized
+14-06-2020:11:47:02.924 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:11:47:14.698 [main] INFO  Practical.RealProject.LandingPage - Good User
+14-06-2020:11:47:14.698 [main] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:11:47:17.211 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:11:47:25.544 [main] INFO  Practical.RealProject.LandingPage - Restricted User
+14-06-2020:11:47:25.544 [main] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:11:47:32.222 [main] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+14-06-2020:11:47:39.267 [main] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+14-06-2020:11:47:39.347 [main] INFO  Practical.RealProject.ValidationNav - Succeed
+14-06-2020:11:55:03.094 [main] INFO  Practical.RealProject.LandingPage - Driver initialized
+14-06-2020:11:55:06.274 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:11:55:18.039 [main] INFO  Practical.RealProject.LandingPage - Good User
+14-06-2020:11:55:18.039 [main] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:11:55:20.796 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:11:55:28.567 [main] INFO  Practical.RealProject.LandingPage - Restricted User
+14-06-2020:11:55:28.567 [main] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:11:55:35.368 [main] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+14-06-2020:11:55:44.254 [main] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+14-06-2020:11:55:44.310 [main] INFO  Practical.RealProject.ValidationNav - Succeed
+14-06-2020:12:00:37.761 [main] INFO  Practical.RealProject.LandingPage - Driver initialized
+14-06-2020:12:00:41.465 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:12:00:53.168 [main] INFO  Practical.RealProject.LandingPage - Good User
+14-06-2020:12:00:53.168 [main] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:12:00:55.441 [main] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:12:01:04.044 [main] INFO  Practical.RealProject.LandingPage - Restricted User
+14-06-2020:12:01:04.048 [main] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:12:01:12.912 [main] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+14-06-2020:12:01:20.219 [main] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+14-06-2020:12:01:20.280 [main] INFO  Practical.RealProject.ValidationNav - Succeed
+14-06-2020:13:04:36.201 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Driver initialized
+14-06-2020:13:04:42.373 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:13:04:42.748 [TestNG-tests-2] INFO  Practical.RealProject.ValidationTitles - Driver3 initialized
+14-06-2020:13:04:44.336 [TestNG-tests-3] INFO  Practical.RealProject.ValidationNav - Driver2 initialized
+14-06-2020:13:04:44.412 [TestNG-tests-3] INFO  Practical.RealProject.ValidationNav - Succeed
+14-06-2020:13:04:54.131 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Good User
+14-06-2020:13:04:54.132 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - test succeed
+14-06-2020:13:04:55.909 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Reached at URL
+14-06-2020:13:05:04.333 [TestNG-tests-1] INFO  Practical.RealProject.LandingPage - Restricted User
